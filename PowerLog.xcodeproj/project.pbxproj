@@ -27,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		D8313DB81ACC279C00C2A674 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		D8D475581AC9376C00F3E422 /* PowerLog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PowerLog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D4755C1AC9376C00F3E422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D4755D1AC9376C00F3E422 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +41,7 @@
 		D8D475711AC9376C00F3E422 /* PowerLogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PowerLogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8D475761AC9376C00F3E422 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D8D475771AC9376C00F3E422 /* PowerLogTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PowerLogTests.m; sourceTree = "<group>"; };
+		D8D475821AC9382E00F3E422 /* PowerLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PowerLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +83,7 @@
 		D8D4755A1AC9376C00F3E422 /* PowerLog */ = {
 			isa = PBXGroup;
 			children = (
+				D8D475811AC9380700F3E422 /* PowerLog */,
 				D8D4755F1AC9376C00F3E422 /* AppDelegate.h */,
 				D8D475601AC9376C00F3E422 /* AppDelegate.m */,
 				D8D475621AC9376C00F3E422 /* ViewController.h */,
@@ -89,6 +92,7 @@
 				D8D475681AC9376C00F3E422 /* Images.xcassets */,
 				D8D4756A1AC9376C00F3E422 /* LaunchScreen.xib */,
 				D8D4755B1AC9376C00F3E422 /* Supporting Files */,
+				D8313DB81ACC279C00C2A674 /* PrefixHeader.pch */,
 			);
 			path = PowerLog;
 			sourceTree = "<group>";
@@ -117,6 +121,14 @@
 				D8D475761AC9376C00F3E422 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D8D475811AC9380700F3E422 /* PowerLog */ = {
+			isa = PBXGroup;
+			children = (
+				D8D475821AC9382E00F3E422 /* PowerLog.h */,
+			);
+			path = PowerLog;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,7 +309,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -333,7 +345,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -345,6 +357,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = PowerLog/PrefixHeader.pch;
 				INFOPLIST_FILE = PowerLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -355,6 +369,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PRECOMPILE_PREFIX_HEADER = NO;
+				GCC_PREFIX_HEADER = PowerLog/PrefixHeader.pch;
 				INFOPLIST_FILE = PowerLog/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -414,6 +430,7 @@
 				D8D4757D1AC9376C00F3E422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D8D4757E1AC9376C00F3E422 /* Build configuration list for PBXNativeTarget "PowerLogTests" */ = {
 			isa = XCConfigurationList;
@@ -422,6 +439,7 @@
 				D8D475801AC9376C00F3E422 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

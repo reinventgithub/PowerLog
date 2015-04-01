@@ -16,7 +16,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    NSString *str = @"NSLog&PowerLog";
+    
+    NSLog(@"str = %@", str);
+    powerLog(str);
 }
 
 - (void)didReceiveMemoryWarning {
