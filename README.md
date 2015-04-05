@@ -8,7 +8,7 @@
 
 ## 示例
 ```objc
-    - (void)viewDidLoad 
+- (void)viewDidLoad 
 {
     [super viewDidLoad];
     NSString *str = @"NSLog&PowerLog";
@@ -27,4 +27,4 @@ str 指针(powerLog()括号中变量名，属性名，类名，字面量等会�
 
 
 ## 期待
-* 如果使用中有问题或BUG，你可以Issue我
+* 如果使用中遇到问题或BUG，你可以Issue我
