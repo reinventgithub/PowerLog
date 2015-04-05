@@ -3,8 +3,8 @@
 
 ## 如何使用PowerLog
     * 把代码clone或download到本地
-    * 将`PowerLog/PowerLog/PowerLog`文件夹拽入项目中
-    * 在.pch中`#import "PowerLog.h"`
+    * 将 `PowerLog/PowerLog/PowerLog` 文件夹拽入项目中
+    * 在.pch中 `#import "PowerLog.h"`
     * 接下来就可以在整个项目中使用PowerLog了
 
 
