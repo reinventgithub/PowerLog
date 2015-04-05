@@ -1,5 +1,4 @@
 # PowerLog
-比NSLog更好的log
 
 
 ## 如何使用PowerLog
