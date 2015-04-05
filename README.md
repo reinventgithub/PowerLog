@@ -1,5 +1,5 @@
 # PowerLog
-
+比NSLog更好的log
 
 ## 如何使用PowerLog
     * 将`PowerLog/PowerLog/PowerLog`文件夹拽入项目中
