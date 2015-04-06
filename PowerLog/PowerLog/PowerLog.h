@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 #ifdef DEBUG
-#define powerLog(value) fprintf(stderr,"%s line:%d function:%s %s = %s\n", __TIME__, __LINE__, __FUNCTION__, (#value), [_powerLog(@encode(__typeof__((value))), (value)) UTF8String])
+#define powerLog(value) fprintf(stderr,"line:%d function:%s %s = %s\n", __LINE__, __FUNCTION__, (#value), [_powerLog(@encode(__typeof__((value))), (value)) UTF8String])
 #else
 #define powerLog(value)
 #endif
