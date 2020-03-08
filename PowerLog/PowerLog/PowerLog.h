@@ -1,22 +1,20 @@
 //
 //  PowerLog.h
-//  PowerLog
+//  PowerLog 1.1
 //
 //  Created by wxl on 15/3/30.
 //  Copyright (c) 2015年 wxl. All rights reserved.
-//
+//  https://github.com/reinventgithub/PowerLog
 
-#import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
 #ifdef DEBUG
-#define powerLog(value) fprintf(stderr,"line:%d function:%s %s = %s\n", __LINE__, __FUNCTION__, (#value), [_powerLog(@encode(__typeof__((value))), (value)) UTF8String])
+#define PowerLog(value) fprintf(stderr,"%d %s %%%s %s = %s\n\n", __LINE__, __FUNCTION__, @encode(__typeof__((value))), (#value), [_powerLog(@encode(__typeof__((value))), (value)) UTF8String])
 #else
-#define powerLog(value)
+#define PowerLog(value)
 #endif
 
-static inline NSString* _powerLog(const char *type, ...)
-{
+static inline NSString* _powerLog(const char *type, ...) {
     va_list v;
     va_start(v, type);
     NSNumber *number;
@@ -30,9 +28,24 @@ static inline NSString* _powerLog(const char *type, ...)
     } else if (strcmp(type, @encode(CGSize)) == 0) {
         CGSize actual = (CGSize)va_arg(v, CGSize);
         obj = NSStringFromCGSize(actual);
+    } else if (strcmp(type, @encode(CGVector)) == 0) {
+        CGVector actual = (CGVector)va_arg(v, CGVector);
+        obj = NSStringFromCGVector(actual);
+    } else if (strcmp(type, @encode(CGRect)) == 0) {
+        CGRect actual = (CGRect)va_arg(v, CGRect);
+        obj = NSStringFromCGRect(actual);
+    } else if (strcmp(type, @encode(CGAffineTransform)) == 0) {
+        CGAffineTransform actual = (CGAffineTransform)va_arg(v, CGAffineTransform);
+        obj = NSStringFromCGAffineTransform(actual);
     } else if (strcmp(type, @encode(UIEdgeInsets)) == 0) {
         UIEdgeInsets actual = (UIEdgeInsets)va_arg(v, UIEdgeInsets);
         obj = NSStringFromUIEdgeInsets(actual);
+    } else if (strcmp(type, @encode(UIOffset)) == 0) {
+        UIOffset actual = (UIOffset)va_arg(v, UIOffset);
+        obj = NSStringFromUIOffset(actual);
+    } else if (strcmp(type, @encode(NSRange)) == 0) {
+        NSRange actual = (NSRange)va_arg(v, NSRange);
+        obj = NSStringFromRange(actual);
     } else if (strcmp(type, @encode(double)) == 0) {
         double actual = (double)va_arg(v, double);
         number = [NSNumber numberWithDouble:actual];

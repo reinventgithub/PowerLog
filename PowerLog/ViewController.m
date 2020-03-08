@@ -16,10 +16,15 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString *str = @"NSLog&PowerLog";
     
+    NSString *str = @"NSLog";
     NSLog(@"str = %@", str);
-    powerLog(str);
+    str = @"PowerLog";
+    PowerLog(str);
+    
+    CGRect rect = CGRectMake(0, 0, 320, 640);
+    NSLog(@"%@", NSStringFromCGRect(rect));
+    PowerLog(rect);
 }
 
 - (void)didReceiveMemoryWarning {
