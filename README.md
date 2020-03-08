@@ -20,10 +20,11 @@
 ```
 ```
 2015-04-05 11:31:24.333 PowerLog[8081:46235] str = NSLog&PowerLog
-line:22 function:-[ViewController viewDidLoad] str = NSLog&PowerLog
+22 -[ViewController viewDidLoad] %@ str = NSLog&PowerLog
  ```        
-* `line:22` 所在行
-* `function:-[ViewController viewDidLoad]` powerLog被哪个类和方法调用
+* `22` 所在行
+* `-[ViewController viewDidLoad]` powerLog被哪个类和方法调用
+* `%@` 格式控制符
 * `str` 变量名（powerLog()括号中的变量名，属性名，类名，字面量等会形式化的输出）
 
 
